@@ -10,3 +10,12 @@ for (let i = 0; i < 16; i++) {
     }
     container.appendChild(row)
 }
+
+rowItems = document.querySelectorAll(".row-item");
+rowItems.forEach(item => {
+    item.addEventListener("mouseover", changeColor);
+})
+
+function changeColor(e) {
+    this.style.backgroundColor = "black";
+}
