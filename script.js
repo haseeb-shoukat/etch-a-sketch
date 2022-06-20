@@ -13,9 +13,10 @@ for (let i = 0; i < 16; i++) {
 
 rowItems = document.querySelectorAll(".row-item");
 rowItems.forEach(item => {
-    item.addEventListener("mousedown", changeColor);
+    item.addEventListener("mouseover", changeColor);
 })
 
 function changeColor(e) {
     this.style.backgroundColor = "black";
 }
+
