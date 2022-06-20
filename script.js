@@ -1,12 +1,12 @@
-container = document.querySelector(".container")
+const container = document.querySelector(".container")
 createGrid(16);
 
-dimensions = document.querySelector("#dimensions");
+const dimensions = document.querySelector("#dimensions");
 dimensions.addEventListener("click", handlePrompt)
 
-function changeColor(e) {
-    this.style.backgroundColor = "black";
-}
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", clearContainer)
+
 
 function createGrid(n) {
     for (let i = 0; i < n; i++) {
@@ -32,3 +32,15 @@ function handlePrompt() {
     container.innerHTML = "";
     createGrid(parseInt(size));
 }
+
+function clearContainer(e) {
+    rowItems = document.querySelectorAll(".row-item");
+    rowItems.forEach(item => {
+        item.style.backgroundColor = "white";
+    })
+}
+
+function changeColor(e) {
+    this.style.backgroundColor = "black";
+}
+
